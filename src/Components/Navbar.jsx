@@ -9,16 +9,17 @@ const navLinks = [
 ];
 
 export default function Navbar() {
+
   return (
     <nav className="fixed top-0 w-full bg-transparent backdrop-blur-md shadow z-50">
       <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
         {/* Logo */}
         <Link to="/" className="text-2xl font-bold">
-          📝 MyToDo
+          📝 CheckList
         </Link>
 
         {/* Links */}
-        <div className="flex space-x-6">
+        <div className="hidden md:flex space-x-6">
           {navLinks.map((link) => (
             <NavLink
               key={link.name}

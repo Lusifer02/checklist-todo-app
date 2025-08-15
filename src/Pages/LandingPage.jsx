@@ -5,19 +5,8 @@ import Navbar from "../Components/Navbar";
 
 export default function LandingPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-600 to-purple-700 text-white">
+    <div className="min-h-screen bg-gradient-to-br from-blue-600 to-purple-700 text-white ">
       <Navbar />
-      {/* Navbar
-      <nav className="flex justify-between items-center px-8 py-4 bg-transparent">
-        <h1 className="text-2xl font-bold">📝 My To-Do App</h1>
-        <div className="flex gap-6">
-          <a href="#home" className="hover:text-yellow-300 transition">Home</a>
-          <a href="#features" className="hover:text-yellow-300 transition">Features</a>
-          <Link to="/login" className="hover:text-yellow-300 transition">Login</Link>
-          <Link to="/signup" className="hover:text-yellow-300 transition">Sign Up</Link>
-        </div>
-      </nav> */}
-
       {/* Hero Section */}
       <section id="home" className="flex flex-col md:flex-row items-center justify-center px-8 py-16 md:py-24">
         
@@ -28,22 +17,22 @@ export default function LandingPage() {
           transition={{ duration: 0.8 }} 
           className="md:w-1/2"
         >
-          <h1 className="text-5xl font-bold mb-4">Organize Your Tasks Effortlessly</h1>
-          <p className="text-lg text-gray-200 mb-8">
+          <h1 className="text-5xl font-bold sm:text-2xl lg:text-3xl mb-4 text-center"> Organize Your Task with <span className="text-blue-300">CheckList</span></h1>
+          <p className="text-lg text-gray-200 sm:text-xl lg:text-2xl mb-8 text-center">
             Manage your to-dos, track progress, and stay on top of your work.
           </p>
-          <div className="flex gap-4">
+          <div className="flex justify-center item-center gap-4">
+            <Link
+              to="/signup"
+              className="px-6 py-3 bg-yellow-400 text-black font-semibold rounded-lg shadow hover:bg-yellow-300 transition"
+            >
+              Get Started
+            </Link>
             <Link
               to="/login"
               className="px-6 py-3 bg-white text-blue-700 font-semibold rounded-lg shadow hover:bg-gray-200 transition"
             >
               Login
-            </Link>
-            <Link
-              to="/signup"
-              className="px-6 py-3 bg-yellow-400 text-black font-semibold rounded-lg shadow hover:bg-yellow-300 transition"
-            >
-              Sign Up
             </Link>
           </div>
         </motion.div>
@@ -53,9 +42,9 @@ export default function LandingPage() {
           initial={{ opacity: 0, x: 50 }} 
           animate={{ opacity: 1, x: 0 }} 
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="md:w-1/2 flex justify-center mt-10 md:mt-0"
+          className="md:w-1/2 flex-1 justify-center item-center mt-10 md:mt-0 flex gap-8"
         >
-          <img src={taskIllustration} alt="Task illustration" className="w-3/4" />
+          <img src={taskIllustration} alt="Task illustration" className="w-3/4 h-auto" />
         </motion.div>
       </section>
 

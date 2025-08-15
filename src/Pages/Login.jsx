@@ -20,7 +20,7 @@ function Login() {
 
   return (
     <Layout>
-      <div className="flex justify-center items-center h-screen">
+      <div className="flex justify-center items-center h-screen max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <form onSubmit={handleSubmit} className="bg-white text-black rounded-xl shadow-lg p-8 w-full max-w-md">
         <h2 className="text-3xl font-bold text-center mb-6">Login</h2>
         <input
